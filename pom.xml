@@ -5,13 +5,12 @@
   <groupId>org.example</groupId>
   <artifactId>RATRAP</artifactId>
   <version>1.0-SNAPSHOT</version>
-  <packaging>jar</packaging>
 
-  <name>RATRAP</name>
-  <url>http://maven.apache.org</url>
+
+
 
   <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  
     <maven.compliler.source> 17</maven.compliler.source>
     <maven.compliler.target> 17</maven.compliler.target>
   </properties>
@@ -23,37 +22,24 @@
       <version>5.9.3</version>
       <scope>test</scope>
     </dependency>
-    <dependency>
-      <groupId>org.junit.jupiter</groupId>
-      <artifactId>junit-jupiter-api</artifactId>
-      <version>5.9.3</version>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.junit.vintage</groupId>
-      <artifactId>junit-vintage-engine</artifactId>
-      <version>5.9.3</version>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>4.13.2</version>
-      <scope>test</scope>
-    </dependency>
+
+  
   </dependencies>
   <build>
     <plugins>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-surefire-plugin</artifactId>
-        <version>3.1.2</version>
-        <configuration>
-          <includes>
-            <include>**/*.java</include>
-          </includes>
-        </configuration>
-      </plugin>
+         <plugin>
+             <groupId>org.apache.maven.plugins</groupId>
+           <artifactId>maven-jar-plugin</artifactId>
+             <configuration>
+               <archive>
+                 <manifest>
+                   <addClasspath>true</addClasspath>
+                   <mainClass>org.example.Add</mainClass>
+                 </manifest>
+               </archive>
+             </configuraion>                            
+         <plugin>
+           
     </plugins>
   </build>
 
