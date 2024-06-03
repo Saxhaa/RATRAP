@@ -37,7 +37,7 @@
                    <mainClass>org.example.Add</mainClass>
                  </manifest>
                </archive>
-             </configuraion>                            
+             </configuration>                            
          <plugin>
            
     </plugins>
